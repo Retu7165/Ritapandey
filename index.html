@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>My Portfolio</title>
+	<link rel="stylesheet" type="text/css" href="index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Maven+Pro&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Allura&family=Maven+Pro&display=swap" rel="stylesheet">
+</head>
+<body>
+	<header>
+        <nav class="navbar">
+            <div class="logo"><h3>Rita Pandey</h3></div>
+            <div class="navigation">
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <div class="social">
+                            <a href=""><img src="facebook.png" alt=""><span class="tooltiptext">Facebook</span></a>
+                            <a href=""><img src="linkedin.png" alt=""><span class="tooltiptext">linkedin</span></a>
+                            <a href=""><img src="instagram.png" alt=""><span class="tooltiptext">instagram</span></a>
+                            <a href=""><img src="github.png" alt=""><span class="tooltiptext">github</span></a>
+                </div>
+            </div>
+		</nav>
+        <div class="imgDescription">
+            <div class="description">
+                <h3>Hello!</h3>
+                <h1>I'm Rita<br/> Pandey</h1>
+                <p>An aspiring Computer enthauast | Voluntear | Learner</p>
+            </div>
+            <div>
+                <img src="Pramila.png" alt="">
+            </div>
+        </div>
+        <section id="about">
+            <div class="line"></div>
+            <div>
+                <h2>Intro</h2>
+            </div>
+            <div><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget velit velit. Sed eget pretium metus. Sed euismod risus dolor, et ultricies nibh pretium vitae. Praesent lacinia aliquet elit, at feugiat urna tincidunt vitae.lorem20m vitae. Praesent lacinia aliquet elit, at feugiat urna tincidunt vitae.lorem20m vitae. Praesent lacinia aliquet elit, at feugiat urna tincidunt vitae.lorem20</p>
+            </div>
+        </section>
+	</header>
+	<main>
+        <!-- <div>
+            <h1>Education</h1>
+            <p>upto class 10:</p>
+            <h4>Prolific Higher S. School</h4>
+            <p>10+2 yrs in computer science</p>
+            <h4>Insight Vision S. School</h4>
+        </div>
+        <div>
+            <h1>skills</h1>
+        </div> -->
+        <section class="quote">
+            <div class="Quotes">
+                <h1>"The greatest glory in living lies not in never falling, but in rising every time we fall."</h1>
+                <span>Nelson Mandela</span>
+            </div>
+            <div class="Quotes">
+                <h1>"Your time is limited, so don't waste it living someone else's life. Don't be trapped by dogma – which is living with the results of other people's thinking."</h1>
+                <span>Steve Jobs</span>
+            </div>
+            <div class="Quotes">
+                <h1>"Spread love everywhere you go. Let no one ever come to you without leaving happier. "</h1>
+                <span>Mother Teresa</span>
+            </div>
+            <a class="prev" onclick="plusSlides(-1)">❮</a>
+            <a class="next" onclick="plusSlides(1)">❯</a>
+        </section>
+        <section  id="contact">
+            <h2>Contact Me</h2>
+            <p>Email me:ritapandey919@gmail.com <br/> Text me via. linkedin</a></p>
+        </section>
+        
+	</main>
+	<footer>
+		<p>&copy; 2023 My Portfolio. All rights reserved.</p>
+	</footer>
+
+
+    <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+        
+        function plusSlides(n) {
+          showSlides(slideIndex += n);
+        }
+        
+        function currentSlide(n) {
+          showSlides(slideIndex = n);
+        }
+        
+        function showSlides(n) {
+          let i;
+          let slides = document.getElementsByClassName("Quotes");
+          if (n > slides.length) {slideIndex = 1}    
+          if (n < 1) {slideIndex = slides.length}
+          for (i = 0; i < slides.length; i++) {
+              slides[i].style.display = "none";  
+          }
+          slides[slideIndex-1].style.display = "block";  
+        }
+        setInterval(function(){plusSlides(1)},3000)
+
+        </script>
+</body>
+</html>
